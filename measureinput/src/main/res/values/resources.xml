@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="red_light">#FDF3F3</color>
+    <color name="title_text">#515151</color>
+    <color name="lighter_grey">#F8F7F7</color>
+    <attr name="textStyle" format="enum">
+        <enum name="regular" value="0" />
+        <enum name="bold" value="1" />
+    </attr>
+    <declare-styleable name="MeasureInput">
+        <attr name="value" format="float" />
+        <attr name="textStyle" />
+        <attr name="android:enabled"/>
+        <attr name="unit" format="enum">
+            <enum name="height" value="0"/>
+            <enum name="weight" value="1"/>
+            <enum name="temperature" value="2"/>
+        </attr>
+
+        <attr name="unitSystem" format="enum">
+            <enum name="metric" value="0"/>
+            <enum name="imperial" value="1"/>
+        </attr>
+    </declare-styleable>
+    <string-array name="height_units">
+        <item>cm</item>
+        <item>ft</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+    <string name="celsius">\u2103</string>
+    <string name="fahrenheit">\u2109</string>
+
+    <string-array name="temperature_units">
+        <item>@string/celsius</item>
+        <item>@string/fahrenheit</item>
+    </string-array>
+</resources>

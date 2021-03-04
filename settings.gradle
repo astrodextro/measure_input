@@ -1,2 +1,3 @@
+include ':measureinput'
 include ':app'
 rootProject.name = "MeasureInput"
