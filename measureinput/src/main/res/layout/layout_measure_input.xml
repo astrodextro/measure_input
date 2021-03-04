@@ -11,14 +11,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
-        <androidx.appcompat.widget.AppCompatSpinner
+        <Spinner
             android:id="@+id/unit"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/custom_bg_spinner"
-            android:popupBackground="@color/red_light"
             android:spinnerMode="dropdown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

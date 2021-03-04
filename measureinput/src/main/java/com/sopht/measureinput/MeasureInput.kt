@@ -46,7 +46,9 @@ class MeasureInput @JvmOverloads constructor(context: Context, attrs: AttributeS
         super.onFinishInflate()
         binding = LayoutMeasureInputBinding.inflate(LayoutInflater.from(context), this, true)
         val units = listOf(*resources.getStringArray(UNITS[unit]))
-        binding.unit.adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, android.R.id.text1, units)
+        val arrayAdapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, units)
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.unit.adapter = arrayAdapter
         binding.unit.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 if (position == unitSystem) {
@@ -64,7 +66,7 @@ class MeasureInput @JvmOverloads constructor(context: Context, attrs: AttributeS
                     convertToImperial()
                 }
                 setValue(value)
-                (parent?.getChildAt(0) as EditText).setTextColor(ContextCompat.getColor(context, android.R.color.holo_red_dark))
+                (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(context, android.R.color.holo_red_dark))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}

@@ -6,5 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.sopht.measureinput.MeasureInput
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:unit="height"
+        app:unitSystem="metric"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/weight"
+        />
 
+    <com.sopht.measureinput.MeasureInput
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:unit="weight"
+        app:unitSystem="metric"
+        app:layout_constraintTop_toBottomOf="@id/height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/temperature"
+        />
+
+    <com.sopht.measureinput.MeasureInput
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:unit="temperature"
+        app:unitSystem="metric"
+        app:layout_constraintTop_toBottomOf="@id/weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

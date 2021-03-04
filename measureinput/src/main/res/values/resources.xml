@@ -32,11 +32,9 @@
         <item>kg</item>
         <item>lb</item>
     </string-array>
-    <string name="celsius">\u2103</string>
-    <string name="fahrenheit">\u2109</string>
 
     <string-array name="temperature_units">
-        <item>@string/celsius</item>
-        <item>@string/fahrenheit</item>
+        <item>\u2103</item>
+        <item>\u2109</item>
     </string-array>
 </resources>
